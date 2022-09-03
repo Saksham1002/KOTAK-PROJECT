@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RESET PIN</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .logo {
+        background-color: #02264d;
+      }
+
+      marquee {
+        background-color: #badbf8;
+        margin: -3px;
+      }
+
+      h1 {
+        color: whitesmoke;
+      }
+      h1#mainhead {
+        color: black;
+      }
+
+      .heading {
+        margin: 20px 308px;
+        padding: 47px 11px;
+        width: 55vw;
+        height: 10vh;
+        font-family: poppins;
+        display: flex;
+        justify-content: center;
+      }
+
+      #button {
+        margin: 10px 40vw;
+        padding: 46px 15px;
+        background-color: antiquewhite;
+        border: 2px solid black;
+        border-radius: 25px;
+        width: 270px;
+        height: 110px;
+        font-size: larger;
+        font-family: comic sans;
+      }
+
+      input {
+        width: 225px;
+        height: 40px;
+      }
+
+      input#button:hover {
+        color: whitesmoke;
+        background-color: #02264d;
+      }
+    </style>
+
+<script type="text/javascript">
+	function printmsg() {
+	  
+	  //var ps1 = document.f1.newp.value;
+	  var ps1= document.f1.newp.value;
+	  var ps2 = document.f1.confirmp.value;
+	
+	  if (ps1 == ps2) {
+		alert("pin is correct");
+		alert("reset successful");
+	  } 
+	  else {
+		alert("pin is incorrect");
+		
+	  }
+	}
+  </script>
+  </head>
+  <body bgcolor="red">
+    <div class="logo">
+      <img src="logo.jpeg" />
+    </div>
+    <header>
+      <marquee>
+        <h1 id="mainhead">WELCOME TO KOTAK MAHINDRA BANK ATM</h1>
+      </marquee>
+    </header>
+<!-- 
+    <h1 class="heading">
+      ENTER YOUR NEW PIN NUMBER:<input type="number" name="newp" />
+    </h1>
+    <h1 class="heading">
+      RECONFIRM ENTERED PIN NUMBER:<input type="number" name="confirmp" />
+    </h1> -->
+    <form name="f1" action="pinchangesuccess.html">
+
+		<h1 class="heading">
+			ENTER YOUR NEW PIN NUMBER:<input type="number" id="newp"  />
+		  </h1>
+		  <h1 class="heading">
+			RECONFIRM ENTERED PIN NUMBER:<input type="number" id="confirmp" />
+		  </h1>
+
+      <input type="submit" name="" onclick="printmsg()" value="CONFIRM" id="button"/>
+      <!-- 	    <button id="">CONFIRM</button>-->
+    </form>
+
+    <!-- <script type="text/javascript">
+      function printmsg() {
+        alert("inside func");
+        var ps1 = document.f1.newp.value;
+        var ps2 = document.f1.confirmp.value;
+        if (ps1 == ps2) {
+          alert("pin is correct");
+          alert("reset successful");
+        } else {
+          alert("pin is incorrect");
+        }
+      }
+    </script> -->
+  </body>
+</html>
